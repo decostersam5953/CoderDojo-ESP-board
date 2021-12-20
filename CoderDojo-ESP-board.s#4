@@ -11247,6 +11247,7 @@ Based on  the following source:
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="22.86" y1="93.98" x2="40.64" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="93.98" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
+<label x="25.4" y="93.98" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="GND"/>

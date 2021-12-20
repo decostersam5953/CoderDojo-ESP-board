@@ -56,6 +56,8 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="101" name="Hidden" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="102" name="Changes" color="12" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
@@ -11398,6 +11400,73 @@ Based on  the following source:
 </deviceset>
 </devicesets>
 </library>
+<library name="13oled">
+<packages>
+<package name="1.3&quot;OLED">
+<pad name="VCC" x="0" y="0" drill="0.8" diameter="1.778"/>
+<pad name="GND" x="2.54" y="0" drill="0.8" diameter="1.778"/>
+<pad name="SCL" x="5.08" y="0" drill="0.8" diameter="1.778"/>
+<pad name="SDA" x="7.62" y="0" drill="0.8" diameter="1.9"/>
+<wire x1="-13.97" y1="1.27" x2="-13.97" y2="-29.21" width="0.127" layer="21"/>
+<wire x1="-13.97" y1="-29.21" x2="21.59" y2="-29.21" width="0.127" layer="21"/>
+<wire x1="21.59" y1="-29.21" x2="21.59" y2="1.27" width="0.127" layer="21"/>
+<wire x1="21.59" y1="1.27" x2="-13.97" y2="1.27" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="13&quot;OLED">
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-10.16" x2="12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<rectangle x1="2.54" y1="-5.08" x2="5.08" y2="-2.54" layer="94"/>
+<rectangle x1="5.08" y1="-2.54" x2="7.62" y2="0" layer="94"/>
+<rectangle x1="7.62" y1="0" x2="10.16" y2="2.54" layer="94"/>
+<rectangle x1="0" y1="-7.62" x2="2.54" y2="-5.08" layer="94"/>
+<rectangle x1="2.54" y1="0" x2="5.08" y2="2.54" layer="94"/>
+<rectangle x1="-2.54" y1="0" x2="0" y2="2.54" layer="94"/>
+<rectangle x1="-7.62" y1="0" x2="-5.08" y2="2.54" layer="94"/>
+<rectangle x1="-5.08" y1="-2.54" x2="-2.54" y2="0" layer="94"/>
+<rectangle x1="0" y1="-2.54" x2="2.54" y2="0" layer="94"/>
+<rectangle x1="-7.62" y1="-5.08" x2="-5.08" y2="-2.54" layer="94"/>
+<rectangle x1="-2.54" y1="-5.08" x2="0" y2="-2.54" layer="94"/>
+<rectangle x1="7.62" y1="-5.08" x2="10.16" y2="-2.54" layer="94"/>
+<rectangle x1="-5.08" y1="-7.62" x2="-2.54" y2="-5.08" layer="94"/>
+<rectangle x1="5.08" y1="-7.62" x2="7.62" y2="-5.08" layer="94"/>
+<rectangle x1="-5.08" y1="2.54" x2="-2.54" y2="5.08" layer="94"/>
+<rectangle x1="0" y1="2.54" x2="2.54" y2="5.08" layer="94"/>
+<rectangle x1="5.08" y1="2.54" x2="7.62" y2="5.08" layer="94"/>
+<pin name="GND" x="-2.54" y="12.7" length="middle" rot="R270"/>
+<pin name="SCL" x="0" y="12.7" length="middle" rot="R270"/>
+<pin name="SDA" x="2.54" y="12.7" length="middle" rot="R270"/>
+<pin name="VCC" x="5.08" y="12.7" length="middle" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="13&quot;OLED">
+<gates>
+<gate name="G$1" symbol="13&quot;OLED" x="10.16" y="12.7"/>
+</gates>
+<devices>
+<device name="13&quot;OLED" package="1.3&quot;OLED">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11454,6 +11523,7 @@ Based on  the following source:
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2"/>
+<part name="U$1" library="13oled" deviceset="13&quot;OLED" device="13&quot;OLED"/>
 </parts>
 <sheets>
 <sheet>
@@ -11635,6 +11705,7 @@ Based on  the following source:
 <attribute name="NAME" x="98.044" y="135.001" size="1.778" layer="95"/>
 <attribute name="VALUE" x="98.044" y="129.921" size="1.778" layer="96"/>
 </instance>
+<instance part="U$1" gate="G$1" x="314.96" y="71.12" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -11718,6 +11789,12 @@ Based on  the following source:
 <pinref part="U1" gate="A" pin="VDD"/>
 <wire x1="144.78" y1="185.42" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
 <label x="132.08" y="185.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="312.42" y1="83.82" x2="312.42" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="86.36" x2="299.72" y2="86.36" width="0.1524" layer="91"/>
+<label x="299.72" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TXD" class="0">
@@ -11897,6 +11974,12 @@ Based on  the following source:
 <wire x1="180.34" y1="185.42" x2="193.04" y2="185.42" width="0.1524" layer="91"/>
 <label x="185.42" y="185.42" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="SDA"/>
+<wire x1="317.5" y1="83.82" x2="317.5" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="91.44" x2="299.72" y2="91.44" width="0.1524" layer="91"/>
+<label x="299.72" y="91.44" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
@@ -11910,6 +11993,12 @@ Based on  the following source:
 <pinref part="U1" gate="A" pin="SCL"/>
 <wire x1="144.78" y1="177.8" x2="132.08" y2="177.8" width="0.1524" layer="91"/>
 <label x="132.08" y="177.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="SCL"/>
+<wire x1="314.96" y1="83.82" x2="314.96" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="88.9" x2="299.72" y2="88.9" width="0.1524" layer="91"/>
+<label x="299.72" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -12059,6 +12148,12 @@ Based on  the following source:
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="96.52" y1="142.24" x2="96.52" y2="137.16" width="0.1524" layer="91"/>
 <label x="86.36" y="142.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="320.04" y1="83.82" x2="320.04" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="93.98" x2="299.72" y2="93.98" width="0.1524" layer="91"/>
+<label x="299.72" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3V3FT" class="0">
@@ -12253,6 +12348,30 @@ Based on  the following source:
 <wire x1="53.34" y1="142.24" x2="48.26" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="137.16" x2="48.26" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="IO16"/>
+<wire x1="172.72" y1="66.04" x2="157.48" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="IO14"/>
+<wire x1="172.72" y1="60.96" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="IO12"/>
+<wire x1="172.72" y1="55.88" x2="157.48" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="IO13"/>
+<wire x1="172.72" y1="50.8" x2="157.48" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
