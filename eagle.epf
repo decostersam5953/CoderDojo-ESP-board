@@ -271,6 +271,7 @@ UsedLibrary="C:/Users/sade/Downloads/switch-tact.lbr"
 UsedLibrary="C:/Users/sade/Downloads/llk5_library.lbr"
 UsedLibrary="C:/Users/sade/Downloads/esp826612q.lbr"
 UsedLibrary="Documents/libraries/PCA9685PW_118.lbr"
+UsedLibrary="Documents/libraries/AMS1117-3.3.lbr"
 
 [Win_1]
 Type="Control Panel"
