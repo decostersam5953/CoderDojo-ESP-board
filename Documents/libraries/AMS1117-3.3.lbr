@@ -103,7 +103,7 @@
 </symbols>
 <devicesets>
 <deviceset name="AMS1117-3.3" prefix="U">
-<description>Sot223/Pkg 1-Amp 3.3-Volt Low Drop Out Voltage Regulatator &lt;a href="https://pricing.snapeda.com/parts/AMS1117-3.3/AMD/view-part?ref=eda"&gt;Check prices&lt;/a&gt;</description>
+<description>Sot223/Pkg 1-Amp 3.3-Volt Low Drop Out Voltage Regulatator &lt;a href="https://pricing.snapeda.com/parts/AMS1117-3.3/Advanced%20Monolithic%20Systems/view-part?ref=eda"&gt;Check prices&lt;/a&gt;</description>
 <gates>
 <gate name="G$1" symbol="AMS1117-3.3" x="0" y="0"/>
 </gates>
@@ -121,9 +121,9 @@ LDO Voltage Regulators 800MA LDO LINEAR REG
 "/>
 <attribute name="MP" value="AMS1117-3.3"/>
 <attribute name="Availability" value="In Stock"/>
-<attribute name="Package" value="None"/>
+<attribute name="Package" value="SOT-223 Seeed Technology"/>
 <attribute name="Price" value="None"/>
-<attribute name="MF" value="AMD"/>
+<attribute name="MF" value="Advanced Monolithic Systems"/>
 </technology>
 </technologies>
 </device>
