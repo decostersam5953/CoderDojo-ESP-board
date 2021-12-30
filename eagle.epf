@@ -273,6 +273,7 @@ UsedLibrary="C:/Users/sade/Downloads/esp826612q.lbr"
 UsedLibrary="Documents/libraries/PCA9685PW_118.lbr"
 UsedLibrary="Documents/libraries/AMS1117-3.3.lbr"
 UsedLibrary="Documents/libraries/1N4007.lbr"
+UsedLibrary="Documents/libraries/MCP23017-E_SO.lbr"
 
 [Win_1]
 Type="Control Panel"
